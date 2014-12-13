@@ -7,7 +7,6 @@ Yeah, uh, it's vim and stuff.
 
  ````cd ~````
 
-
 2. git clone this repo as your .vim folder:
 
  ````git clone https://github.com/Spots/spots-vim.git .vim```` 
