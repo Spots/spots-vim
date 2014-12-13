@@ -1,4 +1,4 @@
-# Steven's vim environment
+# Spots's vim environment
 
 Yeah, uh, it's vim and stuff.
 
