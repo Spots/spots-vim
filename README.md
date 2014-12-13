@@ -36,6 +36,7 @@ Yeah, uh, it's vim and stuff.
 * vim-bbye to make closing buffers easier. mapped to \q
 * vim-rooter If the file is in a version controlled folder, move NERDTree to its root.
 * vim-fugitive Git inside of vim
+* vim-ruby Ruby syntax in vim
 
 ##Font
 I like the bitstream_vera_mono font that Railscasts uses. I included the font in the fonts/ folder included in the repo. Install it however appropriate for your OS and then configure your terminal app to use that font. 

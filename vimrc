@@ -18,6 +18,7 @@ Bundle 'bling/vim-bufferline'
 Bundle 'moll/vim-bbye'
 Bundle 'airblade/vim-rooter'
 Bundle 'tpope/vim-fugitive'
+Bundle 'vim-ruby/vim-ruby'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
