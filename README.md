@@ -4,7 +4,9 @@ Yeah, uh, it's vim and stuff.
 
 ## Installing if you have no other previous vim stuff.
 1. cd to your home directory:
-        ```cd ~```
+        ```
+        cd ~
+        ```
 2. git clone this repo as your .vim folder:
        ```git clone https://github.com/Spots/spots-vim.git ~/.vim``` 
 3. install vundle:
