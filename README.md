@@ -17,7 +17,7 @@ Yeah, uh, it's vim and stuff.
 
 4. symlink the vimrc file in it to your .vimrc:
 
- ````ln -s .vim/vimrc ~/.vimrc````
+ ````ln -s ~/.vim/vimrc ~/.vimrc````
 
 5. install the plugins(you will get an error about railscasts, just press enter):
 
