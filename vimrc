@@ -17,6 +17,7 @@ Bundle 'Raimondi/YAIFA'
 Bundle 'bling/vim-bufferline'
 Bundle 'moll/vim-bbye'
 Bundle 'airblade/vim-rooter'
+Bundle 'tpope/vim-fugitive'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
