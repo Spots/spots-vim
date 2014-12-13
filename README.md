@@ -7,12 +7,16 @@ Yeah, uh, it's vim and stuff.
 
        ```cd ~```
 2. git clone this repo as your .vim folder:
+
        ```git clone https://github.com/Spots/spots-vim.git ~/.vim``` 
 3. install vundle:
+
        ```git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim``` 
 4. symlink the vimrc file in it to your .vimrc:
+
        ```ln -s ~/.vim/vimrc ~/.vimrc```
 5. install the plugins(you will get an error about railscasts, just press enter):
+
        ```vim +PluginInstall +qall```
 6. Done!
 
