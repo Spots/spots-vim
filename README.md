@@ -39,3 +39,6 @@ Yeah, uh, it's vim and stuff.
 
 ##Font
 I like the bitstream_vera_mono font that Railscasts uses. I included the font in the fonts/ folder included in the repo. Install it however appropriate for your OS and then configure your terminal app to use that font. 
+
+##More
+I dont do anything specialized with vim really. Just edditing random files, Ansible playbooks, some RoR stuff. If you're more a javascript guy, check out @jameslai here on github for his vim setup for something more advanced
