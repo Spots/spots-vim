@@ -40,4 +40,5 @@ I like the bitstream_vera_mono font that Railscasts uses. I included the font in
 I dont do anything specialized with vim really. Just edditing random files, Ansible playbooks, some RoR stuff. If you're more a javascript guy, check out @jameslai here on github for his vim setup for something more advanced
 
 ##Screenshot
-[screenshot]: http://imgur.com/LkFUjIn
+![Here is a Screenshot]
+(http://imgur.com/LkFUjIn)
