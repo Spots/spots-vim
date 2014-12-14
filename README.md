@@ -41,4 +41,4 @@ I dont do anything specialized with vim really. Just edditing random files, Ansi
 
 ##Screenshot
 ![Here is a Screenshot]
-(http://imgur.com/LkFUjIn)
+(http://i.imgur.com/LkFUjIn.png?1)
