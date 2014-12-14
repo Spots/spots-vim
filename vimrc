@@ -55,3 +55,4 @@ set splitright
 autocmd VimEnter * wincmd p
 :nnoremap <Leader>q :Bdelete<CR>
 set modifiable
+set hlsearch
