@@ -19,7 +19,7 @@ Bundle 'moll/vim-bbye'
 Bundle 'airblade/vim-rooter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-ruby/vim-ruby'
-
+Plugin 'bling/vim-airline'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -49,10 +49,13 @@ let g:indent_guides_guide_size=1
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 set splitbelow
 set splitright
 autocmd VimEnter * wincmd p
 :nnoremap <Leader>q :Bdelete<CR>
 set modifiable
 set hlsearch
+set backspace=indent,eol,start
+set mouse=a
+set hidden
