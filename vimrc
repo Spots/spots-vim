@@ -2,6 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set number
+set relativenumber
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -9,6 +11,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Bundle 'tejr/vim-nagios'
 Plugin 'gmarik/Vundle.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jpo/vim-railscasts-theme'
@@ -19,7 +22,11 @@ Bundle 'moll/vim-bbye'
 Bundle 'airblade/vim-rooter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-ruby/vim-ruby'
+Plugin 'Shougo/neocomplete'
 Plugin 'bling/vim-airline'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'SirVer/ultisnips'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -59,3 +66,13 @@ set hlsearch
 set backspace=indent,eol,start
 set mouse=a
 set hidden
+let g:neocomplete#enable_at_startup = 1
+autocmd FileType           nagios setlocal foldmethod=marker foldmarker={,} foldlevel=9
+:set nolist
+
+" Set some keyboard commands
+map <F5> :Gstatus <cr>
+map <F6> :Gcommit -am "."
+map <F7> :Gpush <cr>
+map <F8> :! update-nagios<cr> 
+:set directory=~/.vim/swap//
