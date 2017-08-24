@@ -38,16 +38,29 @@ Plugin 'Shougo/neocomplete'
 " nifty colors on the command bar
 Plugin 'bling/vim-airline'
 " swap windows with \ww
-Plugin 'wesQ3/vim-windowswap'
+"Plugin 'wesQ3/vim-windowswap'
 " use snippets in vim
-Plugin 'SirVer/ultisnips'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets' 
 " support todo.txt files
-Plugin 'freitass/todo.txt-vim'
+"Plugin 'freitass/todo.txt-vim'
 " when you type a surround, autocomplete it
 Plugin 'jiangmiao/auto-pairs'
 " when you fucked up the above suround use ds,cs to replace it with the right
 " one
 Plugin 'tpope/vim-surround'
+"View a calendar in VIM
+"Bundle 'mattn/calendar-vim'
+"Coffee Script syntax in vim
+Plugin 'kchmck/vim-coffee-script'
+"More natural scrolling
+Plugin 'yuttie/comfortable-motion.vim'
+
+"wiki in Vim
+"Plugin 'vimwiki/vimwiki'
+
+"super tab completion
+"Plugin 'ervandew/supertab'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -91,7 +104,42 @@ set mouse=a
 set ttymouse=xterm2
 
 set hidden
+"let g:neocomplete#enable_at_startup = 1
+
+"" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+let g:neocomplete#enable_auto_select=1
+
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+ " return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+" For no inserting <CR> key.
+  return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+
+" <TAB>: completion.
+inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+
 autocmd FileType           nagios setlocal foldmethod=marker foldmarker={,} foldlevel=9
 :set nolist
 
@@ -102,14 +150,19 @@ map <F7> :Gpush <cr>
 map <F8> :! update-nagios<cr> 
 :set directory=~/.vim/swap//
 
+" turn off the arrow keys. Git Gud
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+"imap <up> <nop>
+"imap <down> <nop>
+"imap <left> <nop>
+"imap <right> <nop>
 
+" Use Shift-Tab for autocomplete
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+"map <Leader>vw :VimwikiIndex<CR>
+"let g:vimwiki_use_calendar=1
