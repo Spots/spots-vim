@@ -56,6 +56,9 @@ Plugin 'kchmck/vim-coffee-script'
 "More natural scrolling
 Plugin 'yuttie/comfortable-motion.vim'
 
+"Show Tags in sidebar with F12"
+Plugin 'majutsushi/tagbar'
+""
 "wiki in Vim
 "Plugin 'vimwiki/vimwiki'
 
@@ -149,6 +152,8 @@ map <F6> :Gcommit -am "."
 map <F7> :Gpush <cr>
 map <F8> :! update-nagios<cr> 
 :set directory=~/.vim/swap//
+
+nmap <F12> :TagbarToggle<CR>
 
 " turn off the arrow keys. Git Gud
 map <up> <nop>
