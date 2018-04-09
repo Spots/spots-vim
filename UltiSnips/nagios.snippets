@@ -1,0 +1,48 @@
+snippet command
+define command {
+	command_name  $1
+	command_line  $USER1$/
+ }
+
+$0
+endsnippet
+
+snippet winhost
+define host {
+	use             windows-host
+	host_name       $1
+	alias           $1
+	address         $2
+	hostgroups			$3
+}
+
+$0
+endsnippet
+
+snippet graphed-service
+define service {
+	hostgroup_name       $1
+	service_description  $2
+	use                  graphed-service
+	display_name         $3
+	check_command        $4
+}
+
+$0
+endsnippet
+
+snippet service
+define service {
+	hostgroup_name 	     $1
+	service_description  $2
+	use                  generic-service
+	display_name         $3
+	check_command        $4
+}
+
+$0
+endsnippet
+
+snippet graphios
+	_graphiteprefix                 nagios.$1.$2
+endsnippet

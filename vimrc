@@ -19,6 +19,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 " theme
 Bundle 'jpo/vim-railscasts-theme'
+Bundle 'challenger-deep-theme/vim'
 " visualize indent levels
 Bundle 'nathanaelkane/vim-indent-guides'
 " autoset indent to match whats used in the file
@@ -36,7 +37,8 @@ Bundle 'vim-ruby/vim-ruby'
 " keyword completion
 Plugin 'Shougo/neocomplete'
 " nifty colors on the command bar
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
 " swap windows with \ww
 "Plugin 'wesQ3/vim-windowswap'
 " use snippets in vim
@@ -59,6 +61,8 @@ Plugin 'yuttie/comfortable-motion.vim'
 "Show Tags in sidebar with F12"
 Plugin 'majutsushi/tagbar'
 ""
+"Powershell editing syntax
+Plugin 'PProvost/vim-ps1'
 "wiki in Vim
 "Plugin 'vimwiki/vimwiki'
 
@@ -84,7 +88,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 syntax enable
 
-colorscheme railscasts
+"colorscheme railscasts
+colorscheme challenger_deep
+let g:lightline = { 'colorscheme': 'challenger_deep' }
+
 "set background=dark
 let g:indent_guides_enable_on_vim_startup = 1
 "let g:indent_guides_auto_colors = 1
@@ -105,7 +112,6 @@ set hlsearch
 set backspace=indent,eol,start
 set mouse=a
 set ttymouse=xterm2
-
 set hidden
 "let g:neocomplete#enable_at_startup = 1
 
@@ -171,3 +177,10 @@ map <right> <nop>
 
 "map <Leader>vw :VimwikiIndex<CR>
 "let g:vimwiki_use_calendar=1
+let NERDTreeMouseMode=2
+
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+"make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber"
+nmap <F1> :NERDTreeToggle<CR>
