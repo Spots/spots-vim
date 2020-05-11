@@ -11,15 +11,16 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 " nagios file sytanx
-Bundle 'tejr/vim-nagios'
+"Bundle 'tejr/vim-nagios'
 " file browser and tab support
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 " theme
-Bundle 'jpo/vim-railscasts-theme'
-Bundle 'challenger-deep-theme/vim'
+"Bundle 'jpo/vim-railscasts-theme'
+Plugin 'tomasiser/vim-code-dark'
+"Bundle 'challenger-deep-theme/vim'
 " visualize indent levels
 Bundle 'nathanaelkane/vim-indent-guides'
 " autoset indent to match whats used in the file
@@ -35,15 +36,15 @@ Bundle 'tpope/vim-fugitive'
 " ruby syntax in vim
 Bundle 'vim-ruby/vim-ruby'
 " keyword completion
-Plugin 'Shougo/neocomplete'
+"Plugin 'Shougo/neocomplete'
 " nifty colors on the command bar
 "Plugin 'bling/vim-airline'
 Plugin 'itchyny/lightline.vim'
 " swap windows with \ww
 "Plugin 'wesQ3/vim-windowswap'
 " use snippets in vim
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets' 
+"Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet-snippets' 
 " support todo.txt files
 "Plugin 'freitass/todo.txt-vim'
 " when you type a surround, autocomplete it
@@ -89,8 +90,10 @@ filetype plugin indent on    " required
 syntax enable
 
 "colorscheme railscasts
-colorscheme challenger_deep
-let g:lightline = { 'colorscheme': 'challenger_deep' }
+colorscheme codedark
+
+"colorscheme challenger_deep
+"let g:lightline = { 'colorscheme': 'challenger_deep' }
 
 "set background=dark
 let g:indent_guides_enable_on_vim_startup = 1
@@ -162,10 +165,10 @@ map <F8> :! update-nagios<cr>
 nmap <F12> :TagbarToggle<CR>
 
 " turn off the arrow keys. Git Gud
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
 
 "imap <up> <nop>
 "imap <down> <nop>
