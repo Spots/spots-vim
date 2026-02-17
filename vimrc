@@ -114,7 +114,7 @@ set modifiable
 set hlsearch
 set backspace=indent,eol,start
 set mouse=a
-set ttymouse=xterm2
+set ttymouse=sgr
 set hidden
 "let g:neocomplete#enable_at_startup = 1
 
